@@ -40,9 +40,9 @@ class CalculadoraTest {
         // 2 - Ejecutar lo que vamos a validar
         Fraccion result = calc.suma(f1, f2);
         // 3 - Aserciones
-        assertAll("Mensaje TODOS",
-        () -> assertEquals(60, result.numerador),
-        () -> assertEquals(60, result.denominador)
+        assertAll("Validamos numerador y denominador",
+        () -> assertEquals(1, result.numerador),
+        () -> assertEquals(1, result.denominador)
         );
     }
 
