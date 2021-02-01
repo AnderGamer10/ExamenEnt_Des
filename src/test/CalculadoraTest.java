@@ -56,6 +56,38 @@ class CalculadoraTest {
         List<Integer> valoresEsperados = new ArrayList<Integer>(Arrays.asList(1,2,3));
         assertEquals(valoresEsperados, result);
     }
+    @Test
+    @DisplayName("test1esLunes")
+    public void test1esLunes(){
+        //Preparación
+        Calculadora c = new Calculadora();
+        //Ejecución
+        String result = c.diaDeLaSemana(1);
+        //Confirmación
+        assertEquals("Lunes", result);
+    }
+
+    @Test
+    @DisplayName("test2esMartes")
+    public void test2esMartes(){
+        //Preparación
+        Calculadora c = new Calculadora();
+        //Ejecución
+        String result = c.diaDeLaSemana(2);
+        //Confirmación
+        assertEquals("Martes", result);
+    }
+
+    @Test
+    @DisplayName("test3LunesEs1")
+    public void test3LunesEs1(){
+        //Preparación
+        Calculadora c = new Calculadora();
+        //Ejecución
+        int result = c.numDiaDeLaSemana("Lunes");
+        //Confirmación
+        assertEquals(1, result);
+    }
     
 
 }

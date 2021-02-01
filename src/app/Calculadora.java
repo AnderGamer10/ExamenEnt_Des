@@ -25,23 +25,26 @@ public class Calculadora {
                 y = y - x;
         return x;
     }
-    public String diaDeLaSemanaString(int n) {
-        String d = "no lo se";
-        if (n == 1)
-            d = "lunes";
-        if (n == 2)
-            d = "martes";
+    public  String diaDeLaSemana(int n){
+        String d="no lo sé";
+
+        if(n==1) d ="Lunes";
+        if(n==2) d ="Martes";
+        if(n==3) d ="Miercooles";
+        if(n==4) d ="Jueves";
+        if(n==5) d ="Viernes";
+        if(n==6) d ="Sabado";
+        if(n==7) d ="Domingo";
         return d;
     }
 
-    public int diaDeLaSemanaInt(String s ) {
-        int d=0;
+    public int numDiaDeLaSemana(String s){
+        int d = 0;
         String dia = s.trim().toLowerCase();
-        System.out.println("s="+s+".");
-        System.out.println("dia="+dia+".");
-        if (dia.equals("lunes")) d=1;
+        if(dia.equals("lunes"))
+            d = 1;
 
-        return  d;
+        return d;
     }
 
     public List<Integer> valoresDePalabras(String str ) {
@@ -53,7 +56,7 @@ public class Calculadora {
         // Por cada palabra se invoca al metodo
         for(int i=0;i<palabras.length;i++){
            // y el valor se añade a una Lista
-           valores.add(diaDeLaSemanaInt(palabras[i]));
+           valores.add(numDiaDeLaSemana(palabras[i]));
         }
         return valores;
     }
