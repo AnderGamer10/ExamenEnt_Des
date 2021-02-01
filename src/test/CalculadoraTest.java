@@ -2,7 +2,7 @@ package test;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
-
+import java.util.*;
 import app.*;
 
 class CalculadoraTest {
@@ -45,5 +45,17 @@ class CalculadoraTest {
         () -> assertEquals(1, result.denominador)
         );
     }
+    @Test
+    @DisplayName("test3LunesEs1")
+    public void testSplit() {
+        // Preparación
+        Calculadora c = new Calculadora();
+        // Ejecución
+        List<Integer> result = c.valoresDePalabras("  lunes    MarteS JueVes  ");
+        //Confirmación
+        List<Integer> valoresEsperados = new ArrayList<Integer>(Arrays.asList(1,2,3));
+        assertEquals(valoresEsperados, result);
+    }
+    
 
 }
