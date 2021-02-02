@@ -26,7 +26,7 @@ public class calcExamen {
         return numeros;
     }
     public List<Integer> valoresProporcionales(int[] numeros, int valorAbsoluto){
-        List<Integer> numerosresult = new ArrayList<Integer>();;
+        List<Integer> numerosresult = new ArrayList<Integer>();
         int numeroGu;
         for(int i = 0; i < numeros.length;i++){
             numeroGu = numeros[i] * 10;
